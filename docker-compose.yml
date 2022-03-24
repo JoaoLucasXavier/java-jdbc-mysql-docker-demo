@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  mysql:
+    container_name: mysql
+    image: mysql:8.0
+    volumes:
+      - /tmp/java_demo:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: java_demo
+      MYSQL_ROOT_PASSWORD: root
+    restart: always
+    ports:
+      - '3306:3306'
